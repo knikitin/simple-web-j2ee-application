@@ -3,7 +3,8 @@ package com.my;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
 
 @Path("/fruit")
 public class MyResource {
@@ -15,13 +16,5 @@ public class MyResource {
         Context compEnv = (Context) iniCtx.lookup("java:comp/env");
         String webmasterName = (String) compEnv.lookup("baseFolder");
         return webmasterName;
-//            return "dd";
     }
 }
-
-
-// <env-entry>
-// <env-entry-name>webmasterName</env-entry-name>
-// <env-entry-value>Ms. W. Master</env-entry-value>
-// <env-entry-type>java.lang.String</env-entry-type>
-// </env-entry>

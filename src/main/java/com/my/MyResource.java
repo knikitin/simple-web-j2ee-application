@@ -6,7 +6,7 @@ import javax.naming.NamingException;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-@Path("/fruit")
+@Path("/fruits")
 public class MyResource {
 
     @GET
